@@ -1,0 +1,18 @@
+* cl-ginkgo-time (WiP)
+
+#+begin_html
+<div align="center">
+  <a href="https://upload.wikimedia.org/wikipedia/commons/d/dd/Ginkgo_biloba_SZ136.png" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Ginkgo_biloba_SZ136.png/359px-Ginkgo_biloba_SZ136.png" width="179" height="240">
+  </a>
+</div>
+#+end_html
+
+Common Lisp library inspired by the [[https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html][Java API for dates, times, instants, and durations]]
+
+** Legal
+
+- Released under the MIT License.
+- [[https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%BC:Ginkgo_biloba_SZ136.png][Source]] for README photo
+
+
