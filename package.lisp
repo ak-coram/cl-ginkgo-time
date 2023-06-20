@@ -4,13 +4,15 @@
   (:nicknames #:ginkgo)
   (:use #:cl)
   (:export
+   ;; generic.lisp
+   #:plus
+   #:to-string
 
    ;; chrono-unit.lisp
    #:chrono-unit-time-based-p
    #:chrono-unit-date-based-p
 
    ;; duration.lisp
-   #:duration
    #:*zero-duration*
    #:duration-of-days
    #:duration-of-hours
