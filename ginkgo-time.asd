@@ -8,6 +8,10 @@
   :serial t
   :depends-on ()
   :components ((:file "package")
+               (:file "const")
+               (:file "generic")
+               (:file "chrono-unit")
+               (:file "duration")
                (:file "ginkgo-time"))
   :in-order-to ((test-op (test-op "ginkgo-time/test"))))
 
