@@ -10,6 +10,11 @@
 
 Common Lisp library inspired by the [[https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/time/package-summary.html][Java API for dates, times, instants, and durations]]
 
+** Disclaimer
+
+The current implementation of this library is incomplete and prone to
+breaking changes. It is not recommended to be used for anything.
+
 ** Legal
 
 - Released under the MIT License.
