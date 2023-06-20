@@ -4,11 +4,11 @@
 
 (defclass duration ()
   ((seconds :initarg :seconds
-            :accessor seconds
+            :reader seconds
             :type integer
             :documentation "Number of seconds in the duration")
    (nanos :initarg :nanos
-          :accessor nanos
+          :reader nanos
           :type (integer 0 999999999)
           :initform 0
           :documentation "Number of nanoseconds in the duration"))
