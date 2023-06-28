@@ -6,7 +6,7 @@
   :author "Ákos Kiss <ak@coram.pub>"
   :license  "MIT License"
   :serial t
-  :depends-on ()
+  :depends-on (#:zoneinfo)
   :components ((:file "package")
                (:file "const")
                (:file "generic")
