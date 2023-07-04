@@ -6,12 +6,15 @@
   :author "Ákos Kiss <ak@coram.pub>"
   :license  "MIT License"
   :serial t
-  :depends-on (#:zoneinfo)
+  :depends-on (#:zoneinfo
+               #:cffi)
   :components ((:file "package")
                (:file "const")
                (:file "generic")
                (:file "chrono-unit")
                (:file "duration")
+               (:file "clock")
+               (:file "instant")
                (:file "ginkgo-time"))
   :in-order-to ((test-op (test-op "ginkgo-time/test"))))
 
