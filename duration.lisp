@@ -36,16 +36,6 @@
       (and (eql (seconds d1) (seconds d2))
            (eql (nanos d1) (nanos d2)))))
 
-(defmethod print-object ((duration duration) stream)
-  (print-unreadable-object (duration stream :type t)
-    (format stream ":SECONDS ~d :NANOS ~d"
-            (seconds duration)
-            (nanos duration))))
-
-(defmethod plus ((d1 duration) (d2 duration))
-  (duration-of-seconds (+ (seconds d1) (seconds d2))
-                       (+ (nanos d1) (nanos d2))))
-
 (defmethod to-string ((d duration))
   (if (duration= d *zero-duration*)
       "PT0S"
@@ -87,6 +77,14 @@
                                 ,@(when has-nanos
                                     (list #\. fraction))
                                 s))))))))
+
+(defmethod print-object ((duration duration) stream)
+  (print-unreadable-object (duration stream :type t)
+    (format stream "~s" (to-string duration))))
+
+(defmethod plus ((d1 duration) (d2 duration))
+  (duration-of-seconds (+ (seconds d1) (seconds d2))
+                       (+ (nanos d1) (nanos d2))))
 
 (defun duration-of-days (days)
   (make-instance 'duration :seconds (* days +seconds-per-day+)))
