@@ -22,4 +22,12 @@
    #:duration-of-micros
    #:duration-of-nanos
    #:duration=
-   #:chrono-unit-duration))
+   #:chrono-unit-duration
+
+   ;; clock.lisp
+   #:clock-now
+
+   ;; instant.lisp
+   #:*epoch-instant*
+   #:instant=
+   #:instant-now))

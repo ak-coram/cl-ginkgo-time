@@ -8,6 +8,5 @@
 (def-suite :ginkgo-time)
 (in-suite :ginkgo-time)
 
-(test nop
-  (is (eql t t)))
-
+(test instant
+  (finishes (ginkgo-time:instant-now)))

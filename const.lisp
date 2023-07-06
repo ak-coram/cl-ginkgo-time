@@ -18,6 +18,3 @@
 (defconstant +nanos-per-minute+ (* +nanos-per-second+ +seconds-per-minute+))
 (defconstant +nanos-per-hour+ (* +nanos-per-minute+ +minutes-per-hour+))
 (defconstant +nanos-per-day+ (* +nanos-per-hour+ +hours-per-day+))
-
-(defconstant +universal-time-epoch-offset+
-  (encode-universal-time 0 0 0 1 1 1970 0))
