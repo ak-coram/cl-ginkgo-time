@@ -25,6 +25,8 @@
    #:chrono-unit-duration
 
    ;; clock.lisp
+   #:*clock-now*
+   #:*clock-now-function*
    #:clock-now
 
    ;; instant.lisp
