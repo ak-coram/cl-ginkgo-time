@@ -44,7 +44,6 @@ jobs:
         shell: bash
         run: |
           ros install neil-lindquist/ci-utils
-          ros run --eval '(ql:quickload :zoneinfo/make-dist)' --eval '(progn (zoneinfo-dist:make-dist) (uiop:quit))'
           run-fiveam -e t -l ginkgo-time/test :ginkgo-time
 
       - name: Run tests (Windows)
@@ -52,5 +51,4 @@ jobs:
         shell: msys2 {0}
         run: |
           ros install neil-lindquist/ci-utils
-          ros run --eval '(ql:quickload :zoneinfo/make-dist)' --eval '(progn (zoneinfo-dist:make-dist) (uiop:quit))'
           run-fiveam -e t -l ginkgo-time/test :ginkgo-time
