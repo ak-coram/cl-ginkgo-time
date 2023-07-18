@@ -7,6 +7,7 @@
   :license  "MIT License"
   :serial t
   :depends-on (#:zoneinfo
+               #:chronogram
                #:trivial-clock)
   :components ((:file "package")
                (:file "const")
