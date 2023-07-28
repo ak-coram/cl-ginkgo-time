@@ -74,3 +74,30 @@
 (defun instant-to-epoch-milli (instant)
   (+ (* (seconds instant) +millis-per-second+)
      (floor (nanos instant) +nanos-per-milli+)))
+
+(declaim (ftype (function (instant &optional (unsigned-byte 54))
+                          fuuid:uuid)
+                instant-to-v8-uuid))
+(defun instant-to-v8-uuid (instant &optional padding)
+  (multiple-value-bind (millis nanos) (floor (nanos instant)
+                                             +nanos-per-milli+)
+    (let ((epoch-millis (+ (* (seconds instant) +millis-per-second+) millis)))
+      (if (<= 0 epoch-millis #xFFFFFFFFFFFF)
+          (fuuid:make-minara-from-components
+           epoch-millis
+           nanos
+           (or padding
+               (crypto:strong-random fuuid:+minara-max-random+)))
+          (error "~A out of range for UUID encoding" instant)))))
+
+(declaim (ftype (function (fuuid:uuid)
+                          (values instant (unsigned-byte 54)))
+                instant-from-v8-uuid))
+(defun instant-of-v8-uuid (uuid)
+  (multiple-value-bind (millis nanos padding) (fuuid:minara-components uuid)
+    (multiple-value-bind (seconds millis) (floor millis
+                                                 +millis-per-second+)
+      (values (instant-of-epoch-second seconds
+                                       (+ (* millis +nanos-per-milli+)
+                                          nanos))
+              padding))))

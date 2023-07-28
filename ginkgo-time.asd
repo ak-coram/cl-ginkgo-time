@@ -8,7 +8,9 @@
   :serial t
   :depends-on (#:zoneinfo
                #:chronogram
-               #:trivial-clock)
+               #:trivial-clock
+               #:ironclad/prngs
+               #:frugal-uuid/non-frugal)
   :components ((:file "package")
                (:file "const")
                (:file "generic")

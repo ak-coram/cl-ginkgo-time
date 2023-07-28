@@ -35,6 +35,10 @@
          (i (gt:instant-of-epoch-milli epoch-milli)))
     (is (eql epoch-milli (gt:instant-to-epoch-milli i)))))
 
+(test instant-v8-uuid-conversion
+  (let ((i (instant-now)))
+    (instant= i (instant-of-v8-uuid (instant-to-v8-uuid i)))))
+
 (test instant-plus-duration
   (let ((d (gt:plus (ginkgo:chrono-unit-duration :days)
                     (ginkgo:chrono-unit-duration :nanos))))
