@@ -54,8 +54,10 @@
    #:instant-now
    #:instant-of-epoch-second
    #:instant-of-epoch-milli
+   #:instant-of-v8-uuid
    #:instant-to-epoch-second
    #:instant-to-epoch-milli
+   #:instant-to-v8-uuid
 
    ;; Misc. accessors
    seconds
