@@ -23,6 +23,7 @@ breaking changes. It is not recommended to be used for anything.
 ** Legal
 
 - Released under the MIT License.
+- [[https://developercertificate.org/][Developer Certificate of Origin]]
 - [[https://ko.wikipedia.org/wiki/%ED%8C%8C%EC%9D%BC:Ginkgo_biloba_SZ136.png][Source]] for README photo
 
 
